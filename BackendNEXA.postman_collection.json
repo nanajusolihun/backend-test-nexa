@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "1bff3e9c-09c9-41bc-aee5-ae95356d3aff",
+		"name": "BackendNEXA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28328576"
+	},
+	"item": [
+		{
+			"name": "Karyawan",
+			"item": [
+				{
+					"name": "getAllKaryawan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/allkaryawan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"allkaryawan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Daftar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nip\" : 20240006,\r\n    \"nama\" : \"Imade\",\r\n    \"alamat\" : \"Bali\",\r\n    \"gender\" : \"Laki-laki\",\r\n    \"tanggal_lahir\" : \"2000-01-20\",\r\n    \"image\" : \"image.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/daftarkaryawan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"daftarkaryawan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Karyawan",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"nama\" : \"Dilan\",\r\n    \"alamat\" : \"Bandung\",\r\n    \"gender\" : \"Laki-laki\",\r\n    \"tanggal_lahir\" : \"2000-03-20\",\r\n    \"image\" : \"image.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/karyawan/edit/:nip",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"karyawan",
+								"edit",
+								":nip"
+							],
+							"variable": [
+								{
+									"key": "nip",
+									"value": "20240004"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Karyawan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/karyawan/detail/:nip",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"karyawan",
+								"detail",
+								":nip"
+							],
+							"variable": [
+								{
+									"key": "nip",
+									"value": "20240002"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Karyawan",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
